@@ -19,7 +19,7 @@ public class LayserPointer : MonoBehaviour
 
         // 라인이 가지개될 색상 표현
         Material material = new Material(Shader.Find("Standard"));
-        material.color = new Color(0, 195, 255, 0.5f);
+        material.color = new Color(0, 195, 0, 0.5f);
         layser.material = material;
         // 레이저의 꼭지점은 2개가 필요 더 많이 넣으면 곡선도 표현 할 수 있다.
         layser.positionCount = 2;
@@ -34,10 +34,10 @@ public class LayserPointer : MonoBehaviour
     void Update()
     {
         Debug.Log("포지션:"+transform.position);
-        //layser.SetPosition(0, transform.position); // 첫번째 시작점 위치
+        layser.SetPosition(0, transform.position); // 첫번째 시작점 위치
                                                    // 업데이트에 넣어 줌으로써, 플레이어가 이동하면 이동을 따라가게 된다.
                                                    //  선 만들기(충돌 감지를 위한)
-        //Debug.DrawRay(transform.position, transform.forward * raycastDistance, Color.red, 0.5f);
+        Debug.DrawRay(transform.position, transform.forward * raycastDistance, Color.red, 0.5f);
 
         // 충돌 감지 시
         if (Physics.Raycast(transform.position, transform.forward, out Collided_object, raycastDistance))
