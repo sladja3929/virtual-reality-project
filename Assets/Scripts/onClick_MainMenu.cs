@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class onClick_MainMenu : MonoBehaviour
 {
-    public GameObject optionMenu;
+    private NavMeshAgent agent;
+    private GameObject player;
 
-    public void guide_btn_clicked()
+    void Start()
     {
-        Debug.Log("Å¬¸¯");
+        player = GameObject.FindGameObjectWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
+    }
+
+    void Update()
+    {
+
     }
 }
