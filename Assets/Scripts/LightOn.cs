@@ -6,6 +6,6 @@ public class LightOn : MonoBehaviour
 {
     public void Light(int idx)
     {
-        transform.GetChild(idx).gameObject.SetActive(true);
+        transform.GetChild(idx).GetChild(2).gameObject.SetActive(true);
     }
 }
