@@ -1022,9 +1022,9 @@ MonoBehaviour:
   body: {fileID: 1332699652553127238}
   head: {fileID: 9192402240119136943}
   walkSpeed: 3
-  prowlDistance: 30
-  hearRange: 80
-  seeRange: 40
+  prowlDistance: 50
+  hearRange: 50
+  seeRange: 30
   level: 1
 --- !u!114 &2266801576096706440
 MonoBehaviour:

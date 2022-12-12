@@ -37,9 +37,14 @@ public class MonsterAI : MonoBehaviour
     {
         level = l;
         walkSpeed = walkSpeed * 2f;
-        if(monsterState != MonsterState.Idle)
+        if(level != 1)
         {
-            anim.SetInteger("walkOrRun", level);
+            anim.SetBool("isRunning", true);
+        }
+        if(level == 3)
+        {
+            hearRange = 100;
+            seeRange = 50;
         }
     }
 
@@ -94,7 +99,7 @@ public class MonsterAI : MonoBehaviour
     }
     private IEnumerator Idle()
     {
-        anim.SetInteger("walkOrRun", 0);
+        anim.SetBool("isMoving", false);
         StartCoroutine("IdletoProwl");
         agent.velocity = Vector3.zero;
 
@@ -107,16 +112,16 @@ public class MonsterAI : MonoBehaviour
 
     private IEnumerator IdletoProwl()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         ChangeState(MonsterState.Prowl);
     }
 
     private IEnumerator Prowl()
     {
         Debug.Log("prowl");
-        anim.SetInteger("walkOrRun", level);
+        anim.SetBool("isMoving", true);
         float currentTime = 0;
-        float maxTime = 5;
+        float maxTime = 6;
 
         agent.speed = walkSpeed;
         Vector3 targetPosition = SetProwlPosition();
@@ -145,7 +150,7 @@ public class MonsterAI : MonoBehaviour
     private IEnumerator Recognize()
     {
         Debug.Log("hear");
-        anim.SetInteger("walkOrRun", level);
+        anim.SetBool("isMoving", true);
 
         agent.speed = walkSpeed;
         agent.SetDestination(player.transform.position);
@@ -161,7 +166,7 @@ public class MonsterAI : MonoBehaviour
     private IEnumerator Race()
     {
         Debug.Log("see");
-        anim.SetInteger("walkOrRun", level);
+        anim.SetBool("isMoving", true);
         agent.speed = walkSpeed;
 
         while (true)
