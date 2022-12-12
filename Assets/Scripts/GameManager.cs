@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
         //¿­¼è È¹µæ ½Ã Àüµî ÇÏ³ª¾¿ on
         GoalLight.GetComponent<LightOn>().Light(getKeyNum-1);
     }
-
+    public int GetKeyNum()
+    {
+        return getKeyNum;
+    }
     
 }

@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 5605999442120898378}
   - component: {fileID: 5605999442120898377}
   - component: {fileID: 5605999442120898376}
+  - component: {fileID: 1820501456043756944}
   - component: {fileID: 5605999442120898383}
   - component: {fileID: 5605999442120898382}
   m_Layer: 0
@@ -433,7 +434,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getKeyNum: 0
+  GoalLight: {fileID: 0}
   keyNumUI: {fileID: 0}
+--- !u!114 &1820501456043756944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5605999442120898369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25aca9583d25294f9787a43c3ddb6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &5605999442120898383
 Rigidbody:
   m_ObjectHideFlags: 0
