@@ -360,6 +360,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1820501456043756944, guid: e6cc91b2b308fef458a7cbe2794a7e6d, type: 3}
+      propertyPath: GoalPanel
+      value: 
+      objectReference: {fileID: 1425100070}
+    - target: {fileID: 1820501456043756944, guid: e6cc91b2b308fef458a7cbe2794a7e6d, type: 3}
       propertyPath: gameScene
       value: 
       objectReference: {fileID: 1425100070}
