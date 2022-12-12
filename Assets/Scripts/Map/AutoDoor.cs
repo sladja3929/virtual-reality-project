@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class AutoDoor : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float minAngle = 10;
+    [SerializeField] float maxAngle = 40;
+
     IEnumerator Start()
     {
         float endTime;
@@ -16,7 +18,7 @@ public class AutoDoor : MonoBehaviour
         while (true)
         {
             targetVec = transform.rotation.eulerAngles;
-            targetVec.y += Random.Range(10f, 40f);
+            targetVec.y += Random.Range(minAngle, maxAngle);
             targetRot = Quaternion.Euler(targetVec);
 
             endTime = 0f;
