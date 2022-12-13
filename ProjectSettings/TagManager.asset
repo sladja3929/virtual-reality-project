@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Button
   - key
+  - Goal
   layers:
   - Default
   - TransparentFX

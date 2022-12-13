@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     
     public int getKeyNum;
+    public GameObject GoalLight;
     [SerializeField]
     private TMP_Text keyNumUI;
     // Start is called before the first frame update
@@ -22,6 +23,13 @@ public class GameManager : MonoBehaviour
         getKeyNum++;
         keyNumUI.text = getKeyNum.ToString();
         //keyNumUI.GetComponent<TextMesh>().text = getKeyNum.ToString();
-    }
 
+        //¿­¼è È¹µæ ½Ã Àüµî ÇÏ³ª¾¿ on
+        GoalLight.GetComponent<LightOn>().Light(getKeyNum-1);
+    }
+    public int GetKeyNum()
+    {
+        return getKeyNum;
+    }
+    
 }
