@@ -15,14 +15,14 @@ public class MonsterRecognize : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            AIScript.MonsterState(area_level);
+            //AIScript.ChangeAI(area_level);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
         {
-            AIScript.MonsterState(area_level - 1);
+            //AIScript.ChangeAI(area_level - 1);
         }
     }
 }
