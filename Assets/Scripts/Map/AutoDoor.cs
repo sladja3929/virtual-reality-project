@@ -25,7 +25,8 @@ public class AutoDoor : MonoBehaviour
             rotTime = Random.Range(1.5f, 2f);
             while (endTime < rotTime)
             {
-                transform.rotation = Quaternion.Euler(Vector3.Lerp(curRot.eulerAngles, targetRot.eulerAngles, endTime / rotTime));
+                
+                transform.rotation = Quaternion.Slerp(curRot, targetRot, endTime / rotTime);
                 endTime += Time.deltaTime;
                 yield return null;
             }
@@ -34,7 +35,7 @@ public class AutoDoor : MonoBehaviour
             rotTime = Random.Range(1.5f, 2f);
             while (endTime < rotTime)
             {
-                transform.rotation = Quaternion.Euler(Vector3.Lerp(targetRot.eulerAngles, curRot.eulerAngles, endTime / rotTime));
+                transform.rotation = Quaternion.Slerp(targetRot, curRot, endTime / rotTime);
                 endTime += Time.deltaTime;
                 yield return null;
             }
