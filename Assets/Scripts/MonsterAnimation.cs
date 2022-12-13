@@ -68,7 +68,7 @@ public class MonsterAnimation : MonoBehaviour
             }
             float var0 = Mathf.PingPong(timeFaceCh, facepWeight);
             body.SetBlendShapeWeight(0, var0);
-            music.volume = var0 * 0.1f;
+            music.volume = var0 * 0.05f;
         }
 
         //--------------

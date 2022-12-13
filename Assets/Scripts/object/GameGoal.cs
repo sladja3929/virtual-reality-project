@@ -10,7 +10,7 @@ public class GameGoal : MonoBehaviour
         if (collider.gameObject.CompareTag("Goal"))
         {
             Debug.Log("°ñ ÁöÁ¡ Ãæµ¹");
-            if (gameObject.GetComponent<GameManager>().GetKeyNum() ==2)
+            if (gameObject.GetComponent<GameManager>().GetKeyNum() ==4)
             {
                 Debug.Log("°ñ");
                 GoalPanel.gameObject.SetActive(true);

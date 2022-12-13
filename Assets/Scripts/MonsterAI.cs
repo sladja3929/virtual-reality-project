@@ -12,7 +12,7 @@ public class MonsterAI : MonoBehaviour
     public float prowlDistance = 10;
     public float hearRange = 10;
     public float seeRange = 5;
-    public int level = 1;
+    public int level = 0;
 
     GameObject player;
     NavMeshAgent agent;
@@ -36,9 +36,10 @@ public class MonsterAI : MonoBehaviour
     public void ChangeAILevel(int l)
     {
         level = l;
-        walkSpeed = walkSpeed * 2f;
+        
         if(level != 1)
         {
+            walkSpeed = walkSpeed * 2f;
             anim.SetBool("isRunning", true);
         }
         if(level == 3)
@@ -58,7 +59,7 @@ public class MonsterAI : MonoBehaviour
         agent.updatePosition = false;
         ChangeState(MonsterState.Idle);
 
-        StartCoroutine("DebugLevelChange", 2);
+        //StartCoroutine("DebugLevelChange", 2);
     }
     void Update()
     {
