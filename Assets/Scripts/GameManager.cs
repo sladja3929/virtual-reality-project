@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public int getKeyNum;
     public GameObject GoalLight;
     [SerializeField]
-    private TMP_Text keyNumUI;
+    private TextMeshProUGUI keyNumUI;
     // Start is called before the first frame update
     void Start()
     {

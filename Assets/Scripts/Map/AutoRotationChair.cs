@@ -7,10 +7,6 @@ public class AutoRotationChair : MonoBehaviour
     [SerializeField] float minAngle = 10;
     [SerializeField] float maxAngle = 40;
 
-    void Awake()
-    {
-        Debug.Log(transform.rotation.eulerAngles.x);
-    }
     IEnumerator Start()
     {
         float endTime;
