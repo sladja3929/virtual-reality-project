@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public enum MonsterState { None = -1, Idle = 0, Prowl, Recognize, Race, Find, }
 public class MonsterAI : MonoBehaviour
 {
+    public AudioSource audio;
     public SkinnedMeshRenderer body;
     public Transform head;
     public float walkSpeed = 3f;
@@ -31,6 +32,13 @@ public class MonsterAI : MonoBehaviour
         if (monsterState == newState) return;
 
         StopCoroutine(monsterState.ToString());
+
+        if (monsterState == MonsterState.Race)
+        {
+            StartCoroutine("SoundFadeOut");
+            audio.Stop();
+            audio.volume = 0.56f;
+        }
 
         monsterState = newState;
 
@@ -66,7 +74,7 @@ public class MonsterAI : MonoBehaviour
         agent.updatePosition = false;
         ChangeState(MonsterState.Idle);
 
-        StartCoroutine("DebugLevelChange", 3);
+        //StartCoroutine("DebugLevelChange", 3);
     }
     void Update()
     {
@@ -206,7 +214,7 @@ public class MonsterAI : MonoBehaviour
         Debug.Log("see");
         anim.SetBool("isMoving", true);
         agent.speed = walkSpeed;
-
+        audio.Play();
         while (true)
         {
             agent.SetDestination(player.transform.position);
@@ -217,6 +225,16 @@ public class MonsterAI : MonoBehaviour
             yield return null;
         }
     }
+
+    private IEnumerator SoundFadeOut()
+    {
+        while(true)
+        {
+            audio.volume -= Time.deltaTime * 0.1f;
+            yield return new WaitForSeconds(2);
+        }
+    }
+
     private void GoToDestination(Vector3 position)
     {
         if (agent.speed == 0)
