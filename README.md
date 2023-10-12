@@ -14,12 +14,16 @@ Unity로 개발한 Oculus Quest 2용 VR 공포 게임입니다.
 당신은 버려진 마을을 탐험하던 중 괴물과 조우하였습니다. 괴물은 당신을 인식하면 쫒아오며, 괴물을 피해 도망다녀야 합니다.
 마을 곳곳에 흩어진 열쇠들을 모아 배를 타고 마을을 벗어나세요!
 
+
+https://github.com/sladja3929/virtual-reality-project/assets/43125863/a2dc2598-d913-42e1-986f-db4ccd39d8ce
+
+
 ## 팀 소개
 팀 구성: 정성희, 권오민, 박기훈, 나원준
 + 정성희: 팀장, UI 및 설정 구현
 + 권오민: 맵 및 오브젝트 디자인
 + 박기훈: 플레이어 상호작용 및 VR 연동
-+ **나원준: 몬스터 디자인, 알고리즘 구현**
++ 나원준: 몬스터 디자인, 알고리즘 구현
 
 ## 환경
 + 플랫폼: Windows PC, Oculus Quest 2
@@ -28,4 +32,7 @@ Unity로 개발한 Oculus Quest 2용 VR 공포 게임입니다.
 
 ## 구현한 기능
 ### 몬스터 디자인
+
+![그림1](https://github.com/sladja3929/virtual-reality-project/assets/43125863/c9fa1cc8-0b05-44cb-8f36-89b90a544b1a)
+
 ### 행동 알고리즘
