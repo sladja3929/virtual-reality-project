@@ -20,19 +20,8 @@ https://github.com/sladja3929/virtual-reality-project/assets/43125863/a2dc2598-d
 
 ## 팀 소개
 팀 구성: 정성희, 권오민, 박기훈, 나원준
-+ 정성희: 팀장, UI 및 설정 구현
-+ 권오민: 맵 및 오브젝트 디자인
-+ 박기훈: 플레이어 상호작용 및 VR 연동
-+ 나원준: 몬스터 디자인, 알고리즘 구현
 
 ## 환경
 + 플랫폼: Windows PC, Oculus Quest 2
 + 엔진 및 플러그인: Unity 3D, Oculus Integration
 + 사용 언어: C#
-
-## 구현한 기능
-### 몬스터 디자인
-
-![그림1](https://github.com/sladja3929/virtual-reality-project/assets/43125863/c9fa1cc8-0b05-44cb-8f36-89b90a544b1a)
-
-### 행동 알고리즘
